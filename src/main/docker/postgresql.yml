@@ -1,0 +1,11 @@
+version: '2'
+services:
+  coreapi-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/CoreApi/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=CoreApi
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
