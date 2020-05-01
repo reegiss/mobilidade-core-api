@@ -2,22 +2,10 @@ version: '2'
 services:
   coreapi-postgresql:
     image: postgres:12.1
-    container_name: postgres_container
-    env_file: .env
-#    volumes:
-#         - ./postgresql_data/:/var/lib/postgresql/data/
+    # volumes:
+    #     - ~/volumes/jhipster/CoreApi/postgresql/:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=CoreApi
-      - POSTGRES_PASSWORD=
-#      POSTGRES_USER: $POSTGRES_USER
-#      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
-#      PGDATA: /data/postgres
+      - POSTGRES_PASSWORD=password
     ports:
       - 5432:5432
-    networks:
-      - coreapi-network
-
-networks:
-  coreapi-network:
-    driver: bridge
-
